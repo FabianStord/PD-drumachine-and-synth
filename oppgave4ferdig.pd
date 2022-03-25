@@ -1,0 +1,58 @@
+#N canvas -8 -8 1920 1117 12;
+#X obj 75 98 granulargui~;
+#X obj 660 951 dac~;
+#X obj 635 292 trommemaskin~;
+#X obj 661 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 929 249 160;
+#X obj 929 220 loadbang;
+#X obj 661 179 loadbang;
+#X obj 314 757 freeverb~;
+#X obj 470 607 hsl 50 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4900 1;
+#X obj 467 672 hsl 50 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 465 739 hsl 50 30 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 466 646 wet \$1;
+#X msg 464 710 dry \$1;
+#X msg 460 777 roomsize \$1;
+#X obj 765 914 writesf~ 2;
+#X msg 917 826 stop;
+#X msg 917 857 start;
+#X msg 931 767 open oppgave4.wav;
+#X connect 0 0 7 0;
+#X connect 0 0 7 1;
+#X connect 2 0 1 0;
+#X connect 2 0 14 0;
+#X connect 2 1 1 1;
+#X connect 2 1 14 1;
+#X connect 2 2 1 0;
+#X connect 2 2 14 0;
+#X connect 2 3 1 1;
+#X connect 2 3 14 1;
+#X connect 2 4 1 0;
+#X connect 2 4 14 0;
+#X connect 2 5 1 1;
+#X connect 2 5 14 1;
+#X connect 2 6 1 0;
+#X connect 2 6 14 0;
+#X connect 2 7 1 1;
+#X connect 2 7 14 1;
+#X connect 3 0 2 0;
+#X connect 4 0 2 1;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 7 0 1 0;
+#X connect 7 0 14 0;
+#X connect 7 1 1 1;
+#X connect 7 1 14 1;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 10 0 13 0;
+#X connect 11 0 7 0;
+#X connect 12 0 7 0;
+#X connect 13 0 7 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 14 0;
